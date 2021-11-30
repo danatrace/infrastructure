@@ -1,0 +1,13 @@
+apiVersion: webhookconfig.keptn.sh/v1alpha1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.evaluation.finished
+      requests:
+        - "curl --header 'token: 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'
+          --request POST
+          https://api.github.com/repos/danatrace/actions/actions/workflows/1521\
+          701687/dispatches"
+      subscriptionID: a118bc1f-6635-45cf-b78e-a5cba45fc306
