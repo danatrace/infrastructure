@@ -1,0 +1,5 @@
+spec_version: 0.1.4
+indicators:
+  Available_Volume_above_50__-_Resize_Volume_6hr_Limitation: SLO;b2d0b07c-35ba-3513-9bce-6e0b4e3054bb
+  Remaining_CPU_above_60__-_Cluster_Failover_Success___: SLO;204dc7ee-790c-31c3-80a3-76d921d13132
+  Remaining_Memory_above_60__-_Cluster_Failover_Success___: SLO;f92ad407-6c62-38fa-81fb-b63717bbd452
