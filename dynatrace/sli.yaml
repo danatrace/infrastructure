@@ -1,0 +1,5 @@
+spec_version: "1.0"
+indicators:
+  diskused: "metricSelector=builtin:host.disk.usedPct:avg&entitySelector=type(HOST),tag([Environment]evaluation)"
+  cpu_used: "metricSelector=builtin:host.cpu.usage:avg&entitySelector=type(HOST),tag([Environment]evaluation)"
+  memory_used: "metricSelector=builtin:host.mem.usage:avg&entitySelector=type(HOST),tag([Environment]evaluation)"
