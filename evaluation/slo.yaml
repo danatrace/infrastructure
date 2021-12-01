@@ -1,10 +1,41 @@
-spec_version: '0.1.0'
-dashboard: query
-attachRules:
-  tagRule:
-  - meTypes:
-    - HOST
-    tags:
-    - context: CONTEXTLESS
-      key: Environment
-      value: evaluation
+spec_version: ""
+filter: {}
+comparison:
+  compare_with: single_result
+  include_result_with_score: pass
+  number_of_comparison_results: 1
+  aggregate_function: avg
+objectives:
+- sli: Remaining_CPU_above_60__-_Cluster_Failover_Success___
+  displayName: ""
+  pass:
+  - criteria:
+    - '>=65.000000'
+  warning:
+  - criteria:
+    - '>=60.000000'
+  weight: 1
+  key_sli: false
+- sli: Remaining_Memory_above_60__-_Cluster_Failover_Success___
+  displayName: ""
+  pass:
+  - criteria:
+    - '>=65.000000'
+  warning:
+  - criteria:
+    - '>=60.000000'
+  weight: 1
+  key_sli: false
+- sli: Available_Volume_above_50__-_Resize_Volume_6hr_Limitation
+  displayName: ""
+  pass:
+  - criteria:
+    - '>=55.000000'
+  warning:
+  - criteria:
+    - '>=50.000000'
+  weight: 1
+  key_sli: false
+total_score:
+  pass: 90%
+  warning: 75%
